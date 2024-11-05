@@ -10,7 +10,7 @@
 
 .button--primary {
   color: $base-color-white;
-  background-color: lighten($accent-color, 10%);
+  background-color: $accent-color;
 }
 
 .button--secondary {
