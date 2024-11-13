@@ -14,7 +14,6 @@
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper wrapper">
-      <div class="header__container">
         <a class="header__logo logo" href="index.html">
           <picture>
             <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-image-desktop.svg" width="70" height="59">
@@ -29,20 +28,19 @@
             <img class="logo__image logo__image--text" src="images/logo-text-mobile.svg" width="101" height="20" alt="Текстовый логотип сайта кэт энерджи">
           </picture>
         </a>
-        <button class="header__toggle button-toggle button-toggle--close" type="button">
+        <button class="header__toggle button-toggle button-toggle--open button-toggle--no-js" type="button" id="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-      </div>
-      <nav class="nav nav--index">
-        <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--current" href="index.html">Главная</a>
+      <nav class="main-nav main-nav--no-js" id="main-nav">
+        <ul class="main-nav__list" id="nav">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Подбор программы</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
       </nav>

@@ -4,10 +4,27 @@
   background-image: url("../../icons/stack.svg#button-burger");
   background-repeat: no-repeat;
   background-size: 24px 24px;
-  background-color: $base-color-white;
+  background-color: transparent;
   border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
 
-  &--close {
-    background-image: url("../../icons/stack.svg#close-button");
+.button-toggle--close {
+  width: 18px;
+  height: 18px;
+  background-image: url("../../icons/stack.svg#close-button");
+  background-size: 18px 18px;
+}
+
+.button-toggle--no-js {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: $tablet-width) {
+  .button-toggle {
+    display: none;
   }
 }
