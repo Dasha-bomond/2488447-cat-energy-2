@@ -1,0 +1,1 @@
+var t=document.querySelector(".button-toggle"),e=document.querySelector(".main-nav__list"),n=document.querySelector(".main-nav");n.classList.remove("main-nav--no-js");t.classList.remove("button-toggle--open");t.classList.remove("button-toggle--no-js");t.addEventListener("click",()=>{t.classList.toggle("button-toggle--close"),e.classList.toggle("main-nav__list--open")});
