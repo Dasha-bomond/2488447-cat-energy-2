@@ -1,7 +1,7 @@
 .main-nav {
   display: flex;
   position: absolute;
-  top: 65px;
+  top: 66px;
   left: 0;
   right: 0;
   width: 100%;
@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background-color: $background-color-primary;
+  background-color: $base-color-white;
   z-index: 2;
 }
 
@@ -28,7 +28,20 @@
   display: flex;
 }
 
+.main-nav__item {
+  text-align: center;
+  border-top: 1px solid $decor-color;
+  width: 100%;
+
+  &:last-child {
+    border-bottom: 1px solid $decor-color;
+  }
+}
+
 .main-nav__link {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 24px;
   font-family: $primary-font;
   font-size: 20px;
   line-height: 20px;
@@ -39,28 +52,79 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
+    width: unset;
     position: static;
     margin-left: auto;
-    margin-top: 30px;
   }
 
   .main-nav__list {
     display: flex;
     flex-direction: row;
-    padding-right: 5px;
-    gap: 34px;
-    height: 32px;
+    padding-right: 4px;
+    gap: 33px;
     background-color: transparent;
+  }
+
+  .main-nav__item {
+    margin: unset;
+    padding: unset;
+    border: unset;
+    width: auto;
+
+    &:last-child {
+      border: unset;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav__link {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+
+    &--current {
+      border-bottom: 2px solid $accent-color;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav {
-    margin-top: 15px;
+  .main-nav__list {
+    padding-right: 0;
+    gap: 35px;
   }
 
-  .main-nav__list {
-    height: 38px;
-    padding-right: 0;
+  .main-nav__list--index .main-nav__link--current {
+    border-bottom: 2px solid $base-color-white;
+  }
+
+  .main-nav__list--index .main-nav__link {
+    color: $base-color-white;
+  }
+
+  .main-nav__item {
+    margin: unset;
+    padding: unset;
+    border: unset;
+    width: auto;
+
+    &:last-child {
+      border: unset;
+    }
+  }
+
+  .main-nav__link {
+    padding-bottom: 8px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

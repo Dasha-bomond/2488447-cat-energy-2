@@ -1,34 +1,98 @@
-.location--page {
-  background-color: $base-color-gray;
+.location {
+  position: relative;
+  width: 100%;
+
+  &--page {
+    background-color: $base-color-gray;
+  }
 }
 
 .location__wrapper {
   display: flex;
-  min-height: 112px;
+  justify-content: space-between;
+  padding: 26px 0;
 }
 
 .location__title {
+  margin: 0;
   font-family: $primary-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $base-color-text-medium;
+  flex: 1;
 }
 
 .location__address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  font-size: 14px;
   line-height: 20px;
   font-style: normal;
 }
 
+.location__street {
+  margin: 0;
+}
+
+.location__city {
+  margin: 0;
+}
+
+.location__map {
+  overflow: hidden;
+  height: 362px;
+  background-size: cover;
+  background-image: image-set("../images/map-mobile@1x.png" 1x type("image/png"), "../images/map-mobile@2x.png" 2x type("image/png"));
+}
+
+.location__image {
+  width: 100%;
+  object-fit: cover;
+}
+
 @media (min-width: $tablet-width) {
   .location__wrapper {
-    min-height: 200px;
+    padding: 60px 40px;
+  }
+
+  .location__title {
+    max-width: 163px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .location__address {
+    max-width: 157px;
+    font-size: 16px;
+    text-align: end;
+  }
+
+  .location__map {
+    height: 400px;
+    background-image: image-set("../images/map-tablet@1x.png" 1x type("image/png"), "../images/images/map-tablet@2x.png" 2x type("image/png"));
   }
 }
 
 @media (min-width: $desktop-width) {
   .location__wrapper {
-    min-height: 199px;
+    background-color: $base-color-white;
+    width: 565px;
+    position: absolute;
+    top: 95px;
+    right: 50%;
+    margin-right: 45px;
+    padding: 60px 78px 60px 80px;
+  }
+
+  .location__address {
+    text-align: start;
+  }
+
+  .location__map {
+    background-image: image-set("../images/map-desktop@1x.png" 1x type("image/png"), "../images/images/map-desktop@2x.png" 2x type("image/png"));
   }
 }

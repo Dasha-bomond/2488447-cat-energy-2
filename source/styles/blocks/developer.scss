@@ -1,3 +1,12 @@
+.developer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0;
+  padding: 19px 0;
+}
+
 .developer__link {
   text-decoration: none;
 
@@ -8,7 +17,7 @@
     height: 34px;
     mask-image: url("../../icons/stack.svg#academy-logo");
     mask-repeat: no-repeat;
-    mask-size: 27px 30px;
+    mask-size: 27px 34px;
     background-color: $brand-color;
   }
 

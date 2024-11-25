@@ -1,4 +1,11 @@
+.other-goods {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $decor-color-dark;
+}
+
 .other-goods__title {
+  margin: 13px 0 0;
   font-family: $primary-font;
   font-weight: 400;
   font-size: 16px;
@@ -7,6 +14,89 @@
   color: $base-color-text-light;
 }
 
+.other-goods__table {
+  display: flex;
+  margin: 13px 0 0;
+  justify-content: space-between;
+}
+
 .other-goods__table-cell {
   line-height: 14px;
+
+  &--price {
+    margin: 0;
+  }
+}
+
+.other-goods__button {
+  margin: 15px 0 18px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .other-goods {
+    padding: 9px 38px 28px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .other-goods__title {
+    margin-top: 17px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .other-goods__table {
+    margin-top: 19px;
+  }
+
+  .other-goods__table-cell {
+    font-size: 16px;
+    line-height: 20px;
+
+    &--quantity {
+      padding-right: 5px;
+    }
+
+    &--price {
+      width: 87px;
+      text-align: end;
+    }
+  }
+
+  .other-goods__button {
+    margin: 22px 0 0;
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .other-goods {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  .other-goods__title {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .other-goods__table {
+    margin: 4px 30px 0 0;
+    width: 295px;
+  }
+
+  .other-goods__table-cell--price {
+    text-align: start;
+    width: 51px;
+  }
+
+  .other-goods__button {
+    margin: 0;
+    width: 244px;
+  }
 }

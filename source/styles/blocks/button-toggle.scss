@@ -3,7 +3,6 @@
   height: 24px;
   background-image: url("../../icons/stack.svg#button-burger");
   background-repeat: no-repeat;
-  background-size: 24px 24px;
   background-color: transparent;
   border: none;
   margin: 0;
@@ -12,10 +11,9 @@
 }
 
 .button-toggle--close {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background-image: url("../../icons/stack.svg#close-button");
-  background-size: 18px 18px;
 }
 
 .button-toggle--no-js {

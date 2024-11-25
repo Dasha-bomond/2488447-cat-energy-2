@@ -3,10 +3,14 @@
 }
 
 .example__wrapper {
-  min-height: 659px;
+  display: grid;
+  grid-template-columns: 1fr 280px 1fr;
+  padding: 25px 0 40px;
 }
 
 .example__title {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: 0 0 40px;
   font-family: $primary-font;
   font-weight: 400;
   font-size: 36px;
@@ -14,39 +18,196 @@
   color: $base-color-text-dark;
 }
 
-.example__description {
-  font-size: 12px;
-  line-height: 12px;
-  text-align: center;
-  text-transform: lowercase;
+.example__text {
+  grid-column: 2 / 3;
+  margin: 0 0 20px;
+  width: 100%;
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-bottom: 20px;
+  grid-column: 2 / 3;
+  justify-content: center;
+  gap: 20px 32px;
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 124px;
+
+  &--cost {
+    flex-basis: auto;
+    flex-flow: row;
+    justify-content: center;
+    gap: 0.3em;
+    width: 100%;
+  }
 }
 
 .example__number {
+  padding: 15px 14px 14px;
   font-family: $primary-font;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: $base-color-text-dark;
+  border: 1px solid $decor-color-dark;
+  border-radius: 5px;
+
+  &--cost {
+    padding: 0;
+    margin: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $base-color-text-dark;
+    border: none;
+    align-self: auto;
+  }
 }
 
-.example__cost {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 20px;
+.example__description {
+  display: block;
+  align-self: center;
+  padding: 0 10px;
+  margin: -0.7em 19px 0;
+  font-size: 12px;
+  line-height: 12px;
   text-align: center;
-  text-transform: uppercase;
-  color: $base-color-text-dark;
+  text-transform: lowercase;
+  background-color: $base-color-gray-dark;
+
+  &--cost {
+    padding: 0;
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $base-color-text-dark;
+    border: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .example {
+    background-color: $base-color-white;
+    border-top: 1px solid $decor-color;
+  }
+
   .example__wrapper {
-    min-height: 1081px;
+    padding: 45px 0 101px;
+    width: 100%;
+    background: linear-gradient(0deg, $base-color-gray-dark 462px, $base-color-white 462px);
+    grid-template-columns: 1fr 708px 1fr;
+  }
+
+  .example__title {
+    margin: 0 0 60px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__text {
+    margin: 0 0 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__list {
+    gap: 43px;
+    justify-content: start;
+    padding-bottom: 92px;
+  }
+
+  .example__item {
+    flex-basis: 162px;
+
+    &--cost {
+      text-align: right;
+      flex-direction: column;
+      flex-basis: 290px;
+      margin-left: auto;
+      gap: 13px;
+      width: auto;
+    }
+  }
+
+  .example__number {
+    padding: 14px 14px 17px;
+    font-size: 30px;
+    line-height: 37px;
+
+    &--cost {
+      padding: 0;
+      text-align: end;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .example__description {
+    margin: -0.5em 8px 0;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $base-color-white;
+
+    &--cost {
+      text-align: end;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    border-top: none;
+  }
+
   .example__wrapper {
-    min-height: 598px;
+    padding: 0;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 433px 787px 1fr;
+    background: linear-gradient(0deg, $base-color-gray 492px, $base-color-white 462px);
+  }
+
+  .example__title {
+    padding-top: 29px;
+    padding-bottom: 85px;
+  }
+
+  .example__text {
+    margin: 0 0 69px;
+  }
+
+  .example__list {
+    gap: 55px 42px;
+    padding-bottom: 75px;
+  }
+
+  .example__item {
+    flex-basis: 162px;
+
+    &--cost {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-basis: 357px;
+      margin-left: 0;
+    }
+  }
+
+  .example__number--cost {
+    margin-right: 30px;
+  }
+
+  .example__description {
+    background: linear-gradient(0deg, $base-color-gray 462px, $base-color-white 462px);
   }
 }
