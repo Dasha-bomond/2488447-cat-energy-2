@@ -84,10 +84,12 @@
   background-color: $base-color-gray-dark;
 
   &--cost {
+    margin: 0;
     padding: 0;
     font-family: $primary-font;
     font-size: 14px;
     line-height: 20px;
+    text-align: start;
     text-transform: uppercase;
     color: $base-color-text-dark;
     border: none;
@@ -158,6 +160,8 @@
     background-color: $base-color-white;
 
     &--cost {
+      align-self: end;
+      margin: 0;
       text-align: end;
       font-size: 20px;
       line-height: 20px;
@@ -174,7 +178,7 @@
     padding: 0;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 1fr 433px 787px 1fr;
-    background: linear-gradient(0deg, $base-color-gray 492px, $base-color-white 462px);
+    background: linear-gradient(0deg, $base-color-gray 462px, $base-color-white 462px);
   }
 
   .example__title {
@@ -209,5 +213,10 @@
 
   .example__description {
     background: linear-gradient(0deg, $base-color-gray 462px, $base-color-white 462px);
+
+    &--cost {
+      text-align: start;
+      margin: 0;
+    }
   }
 }
