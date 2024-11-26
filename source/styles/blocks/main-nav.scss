@@ -1,7 +1,7 @@
 .main-nav {
   display: flex;
   position: absolute;
-  top: 66px;
+  top: 65px;
   left: 0;
   right: 0;
   width: 100%;
@@ -53,15 +53,17 @@
 @media (min-width: $tablet-width) {
   .main-nav {
     width: unset;
+    max-width: 490px;
     position: static;
     margin-left: auto;
   }
 
   .main-nav__list {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: flex-end;
     padding-right: 4px;
-    gap: 33px;
+    gap: 10px  33px;
     background-color: transparent;
   }
 
@@ -98,9 +100,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    max-width: 560px;
+  }
+
   .main-nav__list {
     padding-right: 0;
-    gap: 35px;
+    gap: 20px 35px;
+
+    &--index {
+      max-width: 610px;
+    }
   }
 
   .main-nav__list--index .main-nav__link--current {

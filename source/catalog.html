@@ -21,7 +21,7 @@
             <img class="logo__image logo__image--icon" src="images/logo-image-mobile.svg" width="33" height="38" alt="Логотип сайта кэт энерджи">
           </picture>
         </a>
-        <a class="header__logo-text logo" href="index.html">
+        <a class="header__logo-text logo" href="index.html" tabindex="-1">
           <picture>
             <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg" width="118" height="21">
             <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg" width="101" height="18">
@@ -307,19 +307,19 @@
       <div class="location__wrapper wrapper">
         <h2 class="location__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
         <address class="location__address">
-          <p class="location__street">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="location__street">ул. Большая<br>Конюшенная, д. 19/8</p>
           <p class="location__city">Санкт-Петербург</p>
         </address>
       </div>
       <div class="location__map">
-        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af2e64a53cb71bbe4ed83758235fdb5ce880ec3f54eabb59e74f0a3d1312a1f7a&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
-        <noscript>
+        <div class="location__image-wrapper">
           <picture>
             <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
             <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
             <img class="location__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Карта места нахождения офиса">
           </picture>
-        </noscript>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787672859!2d30.32047247718232!3d59.93871647491515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1732610248650!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>

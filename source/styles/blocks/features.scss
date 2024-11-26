@@ -24,12 +24,11 @@
 .features__item {
   position: relative;
   display: flex;
-  margin-left: 0;
   align-items: center;
   counter-increment: counter 1;
 
   &::before {
-    display: inline-block;
+    display: block;
     content: "";
     background-position: 50%;
     background-repeat: no-repeat;
@@ -69,7 +68,7 @@
 }
 
 .features__text {
-  margin: 1px 0;
+  margin: 0;
 }
 
 .br {

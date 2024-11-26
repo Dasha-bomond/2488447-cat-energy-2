@@ -23,7 +23,7 @@
 
   .header__wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -33,14 +33,15 @@
     margin-right: 13px;
   }
 
-  .header__logo-text {
-    margin-right: unset;
-  }
+  // .header__logo-text {
+  //   margin-right: 30px;
+  //   // margin-right: unset;
+  // }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    position: absolute;
+    position: relative;
     right: 0;
     left: 0;
     background: transparent;

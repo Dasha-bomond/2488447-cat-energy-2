@@ -1,6 +1,8 @@
 .location {
-  position: relative;
-  width: 100%;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: 1fr 320px 1fr;
+  background-color: $base-color-white;
 
   &--page {
     background-color: $base-color-gray;
@@ -9,11 +11,15 @@
 
 .location__wrapper {
   display: flex;
+  grid-area: 1/1/2/-1;
   justify-content: space-between;
-  padding: 26px 0;
+  justify-self: center;
+  width: 320px;
+  padding: 26px 20px;
 }
 
 .location__title {
+  width: 50%;
   margin: 0;
   font-family: $primary-font;
   font-weight: 400;
@@ -21,14 +27,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $base-color-text-medium;
-  flex: 1;
 }
 
 .location__address {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
+  width: 50%;
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
@@ -43,49 +46,75 @@
 }
 
 .location__map {
-  overflow: hidden;
-  height: 362px;
-  background-size: cover;
-  background-image: image-set("../images/map-mobile@1x.png" 1x type("image/png"), "../images/map-mobile@2x.png" 2x type("image/png"));
+  position: relative;
+  display: grid;
+  grid-area: 2/1/3/-1;
+  place-self: center;
+  grid-template-rows: min-content;
+  grid-template-columns: min-content;
 }
 
-.location__image {
-  width: 100%;
-  object-fit: cover;
+.location__map iframe {
+  border: 0;
+  grid-area: 1/1/-1/-1;
+  width: 100vw;
+  height: 362px;
+  display: block;
+}
+
+.location__image-wrapper {
+  grid-area: 1/1/-1/-1;
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
+  .location {
+    grid-template-columns: 1fr 768px 1fr;
+  }
+
   .location__wrapper {
-    padding: 60px 40px;
+    width: 768px;
+    padding: 60px 70px;
   }
 
   .location__title {
-    max-width: 163px;
     font-size: 20px;
     line-height: 26px;
   }
 
   .location__address {
-    max-width: 157px;
     font-size: 16px;
+    line-height: 20px;
     text-align: end;
   }
 
-  .location__map {
-    height: 400px;
-    background-image: image-set("../images/map-tablet@1x.png" 1x type("image/png"), "../images/images/map-tablet@2x.png" 2x type("image/png"));
+  .location__city {
+    padding-top: 17px;
+  }
+
+  .location__map iframe {
+    min-height: 400px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .location__wrapper {
+  .location {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    grid-template-columns: 1fr 110px 1220px 110px 1fr;
     background-color: $base-color-white;
+  }
+
+  .location__wrapper {
+    z-index: 2;
+    grid-area: 2 / 3 / 3 / 4;
+    place-self: center start;
     width: 565px;
-    position: absolute;
-    top: 95px;
-    right: 50%;
-    margin-right: 45px;
-    padding: 60px 78px 60px 80px;
+    padding: 60px 80px;
+    background-color: $base-color-white;
+    //
+    margin-left: 0;
+    margin-bottom: 17px;
   }
 
   .location__address {
@@ -93,6 +122,10 @@
   }
 
   .location__map {
-    background-image: image-set("../images/map-desktop@1x.png" 1x type("image/png"), "../images/images/map-desktop@2x.png" 2x type("image/png"));
+    grid-area: 1/1/-1/-1;
+  }
+
+  .location__image-wrapper {
+    grid-area: 1 / 1 / -1 / -1;
   }
 }

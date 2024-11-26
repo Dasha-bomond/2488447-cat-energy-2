@@ -1,6 +1,6 @@
 .programs__wrapper {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 }
 
 .programs__list {
@@ -15,28 +15,35 @@
 .programs__item {
   display: grid;
   grid-template-columns: 70px 1fr;
-  gap: 21px 0;
-  padding: 22px 20px;
+  gap: 23px 0;
+  padding: 21px 20px 18px;
   background-color: $base-color-gray;
 
   &::before {
     content: "";
     display: block;
     width: 67px;
-    height: 54px;
-    margin-left: -8px;
-    background-position: center center;
+    height: 53px;
+    background-position-x: left;
+    background-position-y: top;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
   &--slim::before {
     background-image: url("../../icons/stack.svg#cat-slim");
+    width: 50px;
   }
 
-  &--pro::before {
-    background-image: url("../../icons/stack.svg#cat-pro");
-    margin-left: -8px;
+  &--pro {
+    padding-top: 24px;
+    padding-bottom: 18px;
+
+    &::before {
+      background-image: url("../../icons/stack.svg#cat-pro");
+      height: 50px;
+      margin-left: -7px;
+    }
   }
 }
 
@@ -64,7 +71,7 @@
   font-family: $primary-font;
   font-size: 16px;
   line-height: 16px;
-  text-align: center;
+  text-align: start;
   color: $base-color-text-dark;
   text-decoration: none;
   text-transform: uppercase;
@@ -76,17 +83,17 @@
 
   &::after {
     content: "";
-    width: 24px;
+    width: 32px;
     height: 12px;
     margin-left: 16px;
     margin-top: 2px;
-    background-image: url("../../icons/stack.svg#arrow");
-    transition: transform 0.3s linear;
-    transform-origin: left center;
+    background-image: url("../../icons/stack.svg#arrow-big");
+    background-position-x: -8px;
+    background-repeat: no-repeat;
   }
 
   &:is(:hover, :active, :focus-visible, :focus)::after {
-    transform: scaleX(1.35);
+    background-position-x: center;
   }
 }
 
@@ -136,6 +143,7 @@
   }
 
   .programs__link {
+    gap: 25px;
     grid-area: unset;
     justify-self: start;
     padding-top: 31px;
@@ -145,7 +153,7 @@
 
     &::after {
       margin-top: 9px;
-      margin-left: 25px;
+      margin-left: 0;
     }
   }
 }
