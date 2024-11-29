@@ -1,52 +1,101 @@
-.additional-products__title-wrapper {
-  margin-top: 25px;
+.additional-products {
+  padding-top: 26px;
+}
+
+.additional-products__title {
+  margin: 0 0 35px;
 }
 
 .additional-products__list {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
-  margin: 34px 0;
+  margin: 0 0 35px;
   padding: 0;
-  list-style-type: none;
-  border-top: 1px solid $decor-color-dark;
+  list-style: none;
 }
 
 @media (min-width: $tablet-width) {
   .additional-products {
-    margin-bottom: 39px;
+    padding: 0 0 40px;
   }
 
-  .additional-products__title-wrapper {
-    margin-top: 75px;
+  .additional-products__title {
+    margin: 0 0 80px 40px;
   }
 
   .additional-products__list {
-    border: 1px solid $decor-color-dark;
-    margin-top: 88px;
+    margin: 0 0 70px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additional-products {
-    margin-bottom: 59px;
-  }
-
-  .additional-products__title-wrapper {
-    margin-top: 77px;
+    padding-top: 0 0 48px;
   }
 
   .additional-products__wrapper {
-    gap: 81px;
-    margin-top: 93px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 896px 1fr;
+    column-gap: 80px;
+  }
+
+  .additional-products__title {
+    margin: 0 0 80px;
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
   }
 
   .additional-products__list {
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    margin-top: 0;
+    margin: 0;
   }
 }
+
+
+// .additional-products__list {
+//   display: flex;
+//   flex-grow: 1;
+//   flex-direction: column;
+//   margin: 34px 0;
+//   padding: 0;
+//   list-style-type: none;
+//   border-top: 1px solid $decor-color-dark;
+// }
+
+// @media (min-width: $tablet-width) {
+//   .additional-products {
+//     margin-bottom: 39px;
+//   }
+
+//   .additional-products__title-wrapper {
+//     margin-top: 75px;
+//   }
+
+//   .additional-products__list {
+//     border: 1px solid $decor-color-dark;
+//     margin-top: 88px;
+//   }
+// }
+
+// @media (min-width: $desktop-width) {
+//   .additional-products {
+//     margin-bottom: 59px;
+//   }
+
+//   .additional-products__title-wrapper {
+//     margin-top: 77px;
+//   }
+
+//   .additional-products__wrapper {
+//     gap: 81px;
+//     margin-top: 93px;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   .additional-products__list {
+//     border-bottom: none;
+//     border-left: none;
+//     border-right: none;
+//     margin-top: 0;
+//   }
+// }

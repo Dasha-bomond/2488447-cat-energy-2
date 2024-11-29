@@ -48,8 +48,9 @@
   </header>
   <main class="main">
     <section class="catalog">
-      <h1 class="catalog__title title">Каталог продукции</h1>
-          <ul class="catalog__list">
+      <div class="catalog__wrapper wrapper">
+        <h1 class="catalog__title title">Каталог продукции</h1>
+        <ul class="catalog__list">
           <li class="catalog__item product">
             <div class="product__wrapper">
               <a class="product__link" href="#">
@@ -65,13 +66,19 @@
               <dl class="product__table">
                 <dt class="visually-hidden">Характеристика</dt>
                 <dd class="visually-hidden">Значение</dd>
-                <dt class="product__table-cell product__table-cell--title">Масса</dt>
-                <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
-                <dt class="product__table-cell product__table-cell--title">Вкус</dt>
-                <dd class="product__table-cell product__table-cell--value">Курица</dd>
-                <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                <dd class="product__table-cell product__table-cell--value">700 ₽</dd>
-            </dl>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Масса</dt>
+                  <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Вкус</dt>
+                  <dd class="product__table-cell product__table-cell--value">Курица</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Цена</dt>
+                  <dd class="product__table-cell product__table-cell--value">700 ₽</dd>
+                </div>
+              </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
           </li>
@@ -87,15 +94,21 @@
               <a class="product__link-title" href="#" tabindex="-1">
                 <h3 class="product__title">Cat Energy PRO 1000&nbsp;г</h3>
               </a>
-                <dl class="product__table">
-                  <dt class="visually-hidden">Характеристика</dt>
-                  <dd class="visually-hidden">Значение</dd>
+              <dl class="product__table">
+                <dt class="visually-hidden">Характеристика</dt>
+                <dd class="visually-hidden">Значение</dd>
+                <div class="product__table-row">
                   <dt class="product__table-cell product__table-cell--title">Масса</dt>
                   <dd class="product__table-cell product__table-cell--value">1000&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
                   <dt class="product__table-cell product__table-cell--title">Вкус</dt>
                   <dd class="product__table-cell product__table-cell--value">Курица</dd>
+                </div>
+                <div class="product__table-row">
                   <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                  <dd class="product__table-cell product__table-cell--value">1000 ₽</dd>
+                  <dd class="product__table-cell product__table-cell--value">1000&nbsp;₽</dd>
+                </div>
               </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
@@ -115,13 +128,19 @@
               <dl class="product__table">
                 <dt class="visually-hidden">Характеристика</dt>
                 <dd class="visually-hidden">Значение</dd>
-                <dt class="product__table-cell product__table-cell--title">Масса</dt>
-                <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
-                <dt class="product__table-cell product__table-cell--title">Вкус</dt>
-                <dd class="product__table-cell product__table-cell--value">Рыба</dd>
-                <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                <dd class="product__table-cell product__table-cell--value">700 ₽</dd>
-            </dl>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Масса</dt>
+                  <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Вкус</dt>
+                  <dd class="product__table-cell product__table-cell--value">Рыба</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Цена</dt>
+                  <dd class="product__table-cell product__table-cell--value">700&nbsp;₽</dd>
+                </div>
+              </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
           </li>
@@ -140,13 +159,19 @@
               <dl class="product__table">
                 <dt class="visually-hidden">Характеристика</dt>
                 <dd class="visually-hidden">Значение</dd>
-                <dt class="product__table-cell product__table-cell--title">Масса</dt>
-                <dd class="product__table-cell product__table-cell--value">1000&nbsp;г</dd>
-                <dt class="product__table-cell product__table-cell--title">Вкус</dt>
-                <dd class="product__table-cell product__table-cell--value">Рыба</dd>
-                <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                <dd class="product__table-cell product__table-cell--value">1000 ₽</dd>
-            </dl>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Масса</dt>
+                  <dd class="product__table-cell product__table-cell--value">1000&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Вкус</dt>
+                  <dd class="product__table-cell product__table-cell--value">Рыба</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Цена</dt>
+                  <dd class="product__table-cell product__table-cell--value">1000&nbsp;₽</dd>
+                </div>
+              </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
           </li>
@@ -165,13 +190,19 @@
               <dl class="product__table">
                 <dt class="visually-hidden">Характеристика</dt>
                 <dd class="visually-hidden">Значение</dd>
-                <dt class="product__table-cell product__table-cell--title">Масса</dt>
-                <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
-                <dt class="product__table-cell product__table-cell--title">Вкус</dt>
-                <dd class="product__table-cell product__table-cell--value">Гречка</dd>
-                <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                <dd class="product__table-cell product__table-cell--value">400 ₽</dd>
-            </dl>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Масса</dt>
+                  <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Вкус</dt>
+                  <dd class="product__table-cell product__table-cell--value">Гречка</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Цена</dt>
+                  <dd class="product__table-cell product__table-cell--value">400&nbsp;₽</dd>
+                </div>
+              </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
           </li>
@@ -190,13 +221,19 @@
               <dl class="product__table">
                 <dt class="visually-hidden">Характеристика</dt>
                 <dd class="visually-hidden">Значение</dd>
-                <dt class="product__table-cell product__table-cell--title">Масса</dt>
-                <dd class="product__table-cell product__table-cell--value">1000&nbsp;г</dd>
-                <dt class="product__table-cell product__table-cell--title">Вкус</dt>
-                <dd class="product__table-cell product__table-cell--value">Гречка</dd>
-                <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                <dd class="product__table-cell product__table-cell--value">700 ₽</dd>
-            </dl>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Масса</dt>
+                  <dd class="product__table-cell product__table-cell--value">1000&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Вкус</dt>
+                  <dd class="product__table-cell product__table-cell--value">Гречка</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Цена</dt>
+                  <dd class="product__table-cell product__table-cell--value">700&nbsp;₽</dd>
+                </div>
+              </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
           </li>
@@ -215,32 +252,35 @@
               <dl class="product__table">
                 <dt class="visually-hidden">Характеристика</dt>
                 <dd class="visually-hidden">Значение</dd>
-                <dt class="product__table-cell product__table-cell--title">Масса</dt>
-                <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
-                <dt class="product__table-cell product__table-cell--title">Вкус</dt>
-                <dd class="product__table-cell product__table-cell--value">Рис</dd>
-                <dt class="product__table-cell product__table-cell--title">Цена</dt>
-                <dd class="product__table-cell product__table-cell--value">500 ₽</dd>
-            </dl>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Масса</dt>
+                  <dd class="product__table-cell product__table-cell--value">500&nbsp;г</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Вкус</dt>
+                  <dd class="product__table-cell product__table-cell--value">Рис</dd>
+                </div>
+                <div class="product__table-row">
+                  <dt class="product__table-cell product__table-cell--title">Цена</dt>
+                  <dd class="product__table-cell product__table-cell--value">500&nbsp;₽</dd>
+                </div>
+              </dl>
               <a class="product__button button button--primary" href="#">Заказать</a>
             </div>
-            </li>
-            <li class="product product-show-more">
-              <div class="product-show-more__wrapper">
-                <h3 class="product-show-more__title">Показать еще 100500 товаров</h3>
-                <p class="product-show-more__text">На самом деле вкусов гораздо больше!</p>
-                <a class="product-show-more__button button button--secondary" href="#">Показать все</a>
-              </div>
-            </li>
-          </ul>
+          </li>
+          <li class="product product-show-more">
+            <div class="product-show-more__wrapper">
+              <h3 class="product-show-more__title">Показать еще 100500 товаров</h3>
+              <p class="product-show-more__text">На самом деле вкусов гораздо больше!</p>
+              <a class="product-show-more__button button button--secondary" href="#">Показать все</a>
+            </div>
+          </li>
+        </ul>
+      </div>
       </section>
       <section class="additional-products">
-        <div class="additional-products__title-wrapper section-title">
-          <div class="section-title__wrapper">
-            <h2 class="section-title__title">Дополнительные товары</h2>
-          </div>
-        </div>
         <div class="additional-products__wrapper wrapper">
+            <h2 class="additional-products__title title-decor">Дополнительные товары</h2>
             <ul class="additional-products__list">
               <li class="additional-products__item other-goods">
                 <h3 class="other-goods__title">Сахарозаменитель</h3>
@@ -248,7 +288,7 @@
                   <dt class="visually-hidden">Размер упаковки</dt>
                   <dd class="visually-hidden">Цена</dd>
                   <dt class="other-goods__table-cell other-goods__table-cell--quantity">1 упаковка (100&nbsp;г)</dt>
-                  <dd class="other-goods__table-cell other-goods__table-cell--price">200 ₽</dd>
+                  <dd class="other-goods__table-cell other-goods__table-cell--price">200&nbsp;₽</dd>
               </dl>
                 <a class="other-goods__button button button--primary" href="#">Заказать</a>
               </li>
@@ -258,7 +298,7 @@
                   <dt class="visually-hidden">Размер упаковки</dt>
                   <dd class="visually-hidden">Цена</dd>
                   <dt class="other-goods__table-cell other-goods__table-cell--quantity">5 литров</dt>
-                  <dd class="other-goods__table-cell other-goods__table-cell--price">50 ₽</dd>
+                  <dd class="other-goods__table-cell other-goods__table-cell--price">50&nbsp;₽</dd>
               </dl>
                 <a class="other-goods__button button button--primary" href="#">Заказать</a>
               </li>
@@ -268,7 +308,7 @@
                   <dt class="visually-hidden">Размер упаковки</dt>
                   <dd class="visually-hidden">Цена</dd>
                   <dt class="other-goods__table-cell other-goods__table-cell--quantity">1 литр</dt>
-                  <dd class="other-goods__table-cell other-goods__table-cell--price">100 ₽</dd>
+                  <dd class="other-goods__table-cell other-goods__table-cell--price">100&nbsp;₽</dd>
               </dl>
                 <a class="other-goods__button button button--primary" href="#">Заказать</a>
               </li>
@@ -278,7 +318,7 @@
                   <dt class="visually-hidden">Размер упаковки</dt>
                   <dd class="visually-hidden">Цена</dd>
                   <dt class="other-goods__table-cell other-goods__table-cell--quantity">1 упаковка (30&nbsp;г)</dt>
-                  <dd class="other-goods__table-cell other-goods__table-cell--price">300 ₽</dd>
+                  <dd class="other-goods__table-cell other-goods__table-cell--price">300&nbsp;₽</dd>
               </dl>
                 <a class="other-goods__button button button--primary" href="#">Заказать</a>
               </li>
@@ -289,12 +329,8 @@
           </div>
         </section>
         <section class="subscribe">
-          <div class="subscribe__title-wrapper section-title">
-            <div class="section-title__wrapper">
-              <h2 class="section-title__title">Акции и новинки</h2>
-            </div>
-          </div>
           <div class="subscribe__wrapper wrapper">
+            <h2 class="subscribe__title title-decor">Акции и новинки</h2>
             <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
             <form class="subscribe__form form" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="email-id">Укажите ваш email</label>
@@ -311,7 +347,7 @@
           <p class="location__city">Санкт-Петербург</p>
         </address>
       </div>
-      <div class="location__map">
+      <div class="location-map">
         <div class="location__image-wrapper">
           <picture>
             <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
@@ -321,7 +357,7 @@
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787672859!2d30.32047247718232!3d59.93871647491515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1732610248650!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </section>
+      </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper wrapper">
