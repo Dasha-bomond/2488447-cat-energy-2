@@ -10,9 +10,11 @@
   <link rel="apple-touch-icon" href="favicons/favicon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <script src="scripts/index.js" defer></script>
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page__body nojs">
-  <header class="header header--index">
+  <header class="header header--index" data-test="header">
     <div class="header__wrapper wrapper">
       <div class="header__logo-wrapper">
         <a class="header__logo logo" href="index.html">
@@ -49,7 +51,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="hero">
+    <section class="hero" data-test="hero">
       <div class="hero__wrapper wrapper">
           <h1 class="hero__title title">Функциональное<br>питание&nbsp;для&nbsp;котов</h1>
           <p class="hero__text">Занялся собой? Займись котом!</p>
@@ -66,7 +68,7 @@
           <a class="hero__button button button--primary" href="#">Подобрать программу</a>
       </div>
     </section>
-    <section class="programs">
+    <section class="programs" data-test="programs">
       <div class="programs__wrapper wrapper">
         <h2 class="visually-hidden">Список программ питания</h2>
         <ul class="programs__list">
@@ -83,7 +85,7 @@
         </ul>
         </div>
     </section>
-    <section class="features">
+    <section class="features" data-test="features">
       <div class="features__wrapper wrapper">
         <h2 class="features__title">Как это работает</h2>
         <ul class="features__list">
@@ -102,7 +104,7 @@
         </ul>
       </div>
     </section>
-    <section class="example">
+    <section class="example" data-test="proof">
       <div class="example__wrapper wrapper">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__text">Борис сбросил 5&nbsp;кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
@@ -143,7 +145,7 @@
         </div>
         </div>
     </section>
-    <section class="location">
+    <section class="location" data-test="contacts">
       <div class="location__wrapper wrapper">
         <h2 class="location__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
         <address class="location__address">
@@ -166,7 +168,7 @@
       </div>
       </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" data-test="footer">
     <div class="footer__wrapper wrapper">
       <a class="footer__logo logo" href="index.html">
         <img class="logo__image logo__image--text" src="images/logo-text-mobile-tablet-desktop.svg" width="128" height="24" alt="Текстовый Логотип сайта кэт энерджи">
