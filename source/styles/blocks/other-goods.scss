@@ -1,8 +1,8 @@
 .other-goods {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid $decor-color-dark;
   padding: 13px 0 18px;
+  border-top: 1px solid $decor-color-dark;
 
   &:last-child {
     border-bottom: 1px solid $decor-color-dark;
@@ -10,21 +10,21 @@
 }
 
 .other-goods__title {
+  margin: 0 0 13px;
   font-family: $primary-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $base-color-text-light;
-  margin: 0 0 13px;
 }
 
 .other-goods__table {
   display: flex;
-  margin: 0 0 15px;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  margin: 0 0 15px;
 }
 
 .other-goods__table-cell {
@@ -44,17 +44,13 @@
 
 .other-goods__button {
   padding: 10px 0;
-  // width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .other-goods {
     display: grid;
-    // flex-direction: column;
-    // border-top: 1px solid $decor-color-dark;
-    padding: 25px 38px 28px;
-    // grid-template-rows: min-content 68px;
     grid-template-columns: repeat(2, 1fr);
+    padding: 25px 38px 28px;
     border: 1px solid $decor-color-dark;
 
     &:not(:first-child) {
@@ -63,16 +59,16 @@
   }
 
   .other-goods__title {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 0 0 25px;
     font-size: 20px;
     line-height: 20px;
-    margin: 0 0 25px;
-    grid-area: 1 / 1 / 2 / 2;
   }
 
   .other-goods__table {
     justify-self: end;
-    margin: 0 0 21px;
     gap: 53px;
+    margin: 0 0 21px;
   }
 
   .other-goods__table-cell {
@@ -95,7 +91,6 @@
     padding: 10px 0;
     line-height: 20px;
     font-size: 16px;
-    // width: 100%;
   }
 }
 
@@ -103,27 +98,23 @@
   .other-goods {
     display: flex;
     flex-direction: row;
-    // border-top: 1px solid $decor-color-dark;
+    justify-content: space-between;
+    align-items: center;
     padding: 14px 0 17px;
-    // grid-template-rows: min-content 68px;
-    // grid-template-columns: repeat(2, 1fr);
-    // border: 1px solid $decor-color-dark;
     border-right: none;
     border-left: none;
-    justify-content: space-between;
     gap: 40px;
-    align-items: center;
   }
 
   .other-goods__title {
-    margin: 0 auto 0 0;
     max-width: 280px;
+    margin: 0 auto 0 0;
   }
 
   .other-goods__table {
+    gap: 20px;
     width: 285px;
     margin: 5px 0 0;
-    gap: 20px;
   }
 
   .other-goods__table-cell {
@@ -142,106 +133,3 @@
     width: 244px;
   }
 }
-
-// .other-goods {
-//   display: flex;
-//   flex-direction: column;
-//   border-bottom: 1px solid $decor-color-dark;
-// }
-
-// .other-goods__title {
-//   margin: 13px 0 0;
-//   font-family: $primary-font;
-//   font-weight: 400;
-//   font-size: 16px;
-//   line-height: 16px;
-//   text-transform: uppercase;
-//   color: $base-color-text-light;
-// }
-
-// .other-goods__table {
-//   display: flex;
-//   margin: 13px 0 0;
-//   justify-content: space-between;
-// }
-
-// .other-goods__table-cell {
-//   line-height: 14px;
-
-//   &--price {
-//     margin: 0;
-//   }
-// }
-
-// .other-goods__button {
-//   margin: 15px 0 18px;
-//   padding: 10px 0;
-//   width: 100%;
-// }
-
-// @media (min-width: $tablet-width) {
-//   .other-goods {
-//     padding: 9px 38px 28px;
-//     flex-flow: row wrap;
-//     justify-content: space-between;
-//   }
-
-//   .other-goods__title {
-//     margin-top: 17px;
-//     font-size: 20px;
-//     line-height: 20px;
-//   }
-
-//   .other-goods__table {
-//     margin-top: 19px;
-//   }
-
-//   .other-goods__table-cell {
-//     font-size: 16px;
-//     line-height: 20px;
-
-//     &--quantity {
-//       padding-right: 5px;
-//     }
-
-//     &--price {
-//       width: 87px;
-//       text-align: end;
-//     }
-//   }
-
-//   .other-goods__button {
-//     margin: 22px 0 0;
-//     line-height: 20px;
-//     font-size: 16px;
-//   }
-// }
-
-// @media (min-width: $desktop-width) {
-//   .other-goods {
-//     flex-wrap: nowrap;
-//     justify-content: flex-end;
-//     align-items: center;
-//     padding: 16px 0;
-//   }
-
-//   .other-goods__title {
-//     margin: 0;
-//     margin-right: auto;
-//   }
-
-//   .other-goods__table {
-//     margin: 4px 30px 0 0;
-//     width: 295px;
-//   }
-
-//   .other-goods__table-cell--price {
-//     text-align: start;
-//     width: 51px;
-//   }
-
-//   .other-goods__button {
-//     margin: 0;
-//     width: 244px;
-//   }
-// }
